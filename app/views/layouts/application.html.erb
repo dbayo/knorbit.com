@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Knorbit</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+	<title>Knorbit</title>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
+		<meta name="description" content="¡Bienvenido a knOrbit. ¿Necesitas consejo para tu startup y no sabes dónde encontrarlo? ¿Buscas Feedback sobre tu resumen ejecutivo? ¿Ideas sobre cómo plantear tu pacto de socios? knOrbit es una innovadora herramienta para recoger feedback de expert@s sobre un tema específico. Ven a knOrbit, escribe tu borrador y recibirás consejos de especialistas y colegas con experiencias similares. Una vez registrada, también podrás ayudar a otras personas...">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/js/bootstrap.min.js"></script>
+	<link href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.2/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+
+	<!--[if lt IE 9]>
+		<script src="js/html5.js"></script>
+	<![endif]-->
+
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<%= csrf_meta_tags %>
+
+
 </head>
 <body>
+
+<nav class="navbar navbar-fixed-top navbar-invers" role="navigation">
+	<div class="navbar-inner">
+		<div class="container">
+			<a href="/es" class="no-margin pull-left"><img id="logo" class="logo" src="<%= image_path 'logo.png'%>" alt="Inicio"></a> 
+		</div>
+	</div>
+</nav>
 
 <%= yield %>
 
